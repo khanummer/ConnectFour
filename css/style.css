@@ -1,0 +1,75 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+   
+
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    color: black;   
+
+}
+/* add velocity in the future */
+/* peach rgb(243, 182, 182) */
+
+div {
+    border-color:black;
+    border-style: solid;
+    padding: 10px;
+    color: black;
+}
+
+
+
+
+
+body {
+    background-image:  url('https://i.redd.it/38glzcwmc1311.png');
+    background-color: black;
+    /* background-position: center;  */
+}
+
+
+    
+
+
+ button {
+    padding: 10px;
+    margin: 10px;
+    border-color:teal;
+    color: teal;
+    background-color: black;
+
+ }
+
+
+ #game-info {
+    text-align: center;
+ }
+
+
+.dropButtons {
+    color: blue;
+    flex-direction: row; 
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+#game-info {
+    justify-items: center;
+}
+
+
