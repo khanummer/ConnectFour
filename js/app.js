@@ -11,21 +11,6 @@ const gameInfo = document.getElementById('game-info');
 const replayBtn = document.getElementById('replay-btn');
 const messages = document.getElementById('game-info');
 
-
-
-// let board = [
-//           /*   0     1     2     3     4     5     */
-//     /* 6 */  [null, null, null, null, null, null],
-//     /* 5 */  [null, null, null, null, null, null],
-//     /* 4 */  [null, null, null, null, null, null],
-//     /* 3 */  [null, null, null, null, null, null],
-//     /* 2 */  [null, null, null, null, null, null],
-//     /* 1 */  [null, null, null, null, null, null],
-//     /* 0 */  [null, null, null, null, null, null]
-// ];
-
-
-
 let winner; // 1, -1, 'T', or null
 let activePlayer;
 let board;
@@ -61,8 +46,6 @@ function startGame() {
     render();
 }
 
-
-
 function render() {
     tds.forEach(function(td) {
         let rowIdx = parseInt(td.id.charAt(0));
@@ -78,47 +61,12 @@ function render() {
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
 }
 
-
-
-
-
-// if 00 is = null {insert 1 } 
-// else if 00 = 1 or -1 {do nothing}
-// check trough 00 - 50
-
-
-//  -------------Win Logic--------------------
-// colIdx = column index
-// rowIdx = row index
-
-// checkWin() {
-//     // while no winner for each co {
-//     winner = checkColWinner(colIdx)
-// }
-
-
-// function checkColWinner(idx) {
-
-//     // loop through each cell until winner
-//    // winner = checkup(colIdx,rowIdx) || checkDiagUp(colIdx,rowIdx) || ... ect
-// }
-
-
-// // check diagup, check up, check down, check diagdown, check diagleft, check diagright,
-
-// function checkUp(colIdx,rowIdx) {
-// if (rowIdx > 2) return null;
-// }
-
-//  --------------------------------------------- /*
-
 function winCheck() {
     winner = null;
     for (let colIdx = 0; colIdx < board.length; colIdx++) {
         checkColWinner(colIdx);
         if (winner) return;
    }
-    
 }
 
 function checkColWinner(colIdx) {
@@ -144,13 +92,12 @@ function horizontalWinCheck(colIdx,rowIdx) {
 }
     
 function diagonalUpWinCheck(colIdx,rowIdx) {
-    if (rowIdx > 3 && colIdx > 2) return null; 
+    if (colIdx > 3) return null; 
     return Math.abs(board[colIdx][rowIdx] + board[colIdx+ 1][rowIdx + 1] + board[colIdx + 2][rowIdx + 2] + board[colIdx + 3][rowIdx + 3]) === 4 ? board[colIdx][rowIdx] : null;            
 }
 
-
 function diagonalDownWinCheck(colIdx,rowIdx) {
-    if (rowIdx > 4 && colIdx > 4) return null;
+    if (colIdx > 3) return null;
     return Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx - 1] + board[colIdx + 2][rowIdx - 2] + board[colIdx + 3][rowIdx - 3]) === 4 ? board[colIdx][rowIdx] : null;            
 
 }
