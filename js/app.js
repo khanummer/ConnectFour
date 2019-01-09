@@ -1,7 +1,7 @@
 console.log('test')
 /*--- constants / lookups ---*/
 const players = {
-    '1': 'url(Images/BEAR.png)',
+    '1': 'url(Images/purple-flower.png)',
     '-1': 'url(https://imgur.com/MUhBlCo.png)'
 };
 
@@ -56,7 +56,7 @@ function render() {
     if (winner) {
         messages.textContent = winner === 'T' ? "It's A Tie!" : `${winner === 1 ? 'Player 1 Wins!' : 'Player 2 Wins!'}`;
     } else {
-        messages.textContent = `${activePlayer === 1 ? 'Player 1' : 'Player 2'}'s Turn, P1 : Black, P2 : Blue`;
+        messages.textContent = `${activePlayer === 1 ? 'Player 1' : 'Player 2'}'s Turn, P1 : Purple, P2 : Rainbow`;
     }
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
 }
