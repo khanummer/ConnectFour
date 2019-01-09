@@ -1,8 +1,8 @@
 console.log('test')
 /*--- constants / lookups ---*/
 const players = {
-    '1': 'url(https://oxypro.com.ph/wp-content/uploads/2016/02/blackcircle.png)',
-    '-1': 'url(https://png.pngtree.com/element_pic/17/03/21/ee2a4444e1fc5e3721c7f6b8a70990ce.jpg)'
+    '1': 'url(Images/BEAR.png)',
+    '-1': 'url(https://imgur.com/MUhBlCo.png)'
 };
 
 /*--- cached elements ---*/
@@ -77,7 +77,7 @@ function checkColWinner(colIdx) {
         winner = verticalWinCheck(colIdx, rowIdx) || horizontalWinCheck(colIdx, rowIdx) || diagonalUpWinCheck(colIdx, rowIdx) || diagonalDownWinCheck(colIdx, rowIdx);
         if (winner) return;
     }
-    //get tie
+    // get tie
 }
 
 function verticalWinCheck(colIdx,rowIdx) {
@@ -101,3 +101,5 @@ function diagonalDownWinCheck(colIdx,rowIdx) {
     return Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx - 1] + board[colIdx + 2][rowIdx - 2] + board[colIdx + 3][rowIdx - 3]) === 4 ? board[colIdx][rowIdx] : null;            
 
 }
+
+// black murakami flower instead

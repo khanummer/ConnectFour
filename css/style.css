@@ -1,21 +1,21 @@
 * {
     font-family: 'Press Start 2P', cursive;
-
+   
 }
 
  body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     justify-items: center;
-    color: black;   
+    color: black;  
 } 
 /* add velocity in the future */
 /* peach rgb(243, 182, 182) */
  
-div {
+#game-info {
     border-color:black;
     border-style: solid;
     padding: 10px;
@@ -23,19 +23,52 @@ div {
 }
 
 body {
-    background-image:  url('https://i.redd.it/38glzcwmc1311.png');
-    background-color: black;
-    /* background-position: center;  */
+    background-image: url("https://imgur.com/rOCcoLM.png");
+    background-position: center; 
 }
-
- button {
+ 
+button {
     padding: 10px;
-    margin: 4px;
-    border-color:teal;
-    color: teal;
+    margin: 19px;
+    border-color: white;
+    color: white;
     background-color: black;
  }
 
+ #button0 {
+    color: pink;
+    border-color: pink;
+ }
+
+ #button1 {
+     color: blue;
+     border-color: blue;
+}
+
+#button2 {
+     color: yellow;
+     border-color: yellow;
+}
+
+#button3 {
+     color: red;
+     border-color: red;
+}
+
+#button4 {
+     color: green;
+     border-color: green;
+}
+
+#button5 {
+     color: purple;
+     border-color: purple;
+}
+
+#button6 {
+     color: cyan;
+     border-color: cyan;
+}
  #game-info {
     text-align: center;
  }
@@ -48,8 +81,9 @@ body {
 }
 
 td {
-    height: 50px;
-    width: 50px;
+    flex-direction: row;
+    height: 80px;
+    width: 80px;
     background-size: contain;
     background-repeat: no-repeat;
     border: 2px solid black;
