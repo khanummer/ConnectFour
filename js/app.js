@@ -48,7 +48,15 @@ startGame();
 /*----- functions -------*/
 function startGame() {
     winner = null;
-    board = [[], [], [], [], [], [], []];
+    board = [
+        [], 
+        [], 
+        [], 
+        [], 
+        [], 
+        [], 
+        []
+    ];
     activePlayer = 1;
     render();
 }
@@ -72,10 +80,6 @@ function render() {
 
 
 
-
-function endGame(winningPlayer) {
-    document.getElementById('game-info').innerHTML = "Winner: " + winner;
-}
 
 
 // if 00 is = null {insert 1 } 
@@ -108,7 +112,47 @@ function endGame(winningPlayer) {
 
 //  --------------------------------------------- /*
 
+function winCheck() {
+    winner = null;
+    document.getElementById('game-info').innerHTML = "Winner: " + winner;
+    board =[];
+   
+    checkColWinner();
 
-// for (i = 0; i < 6; i++) {
-//     if (colIdx) = 
-// };
+}
+
+function checkColWinner(colIdx) {
+   
+    let colArr = board[colIdx];
+   
+    for (i = 0; i < colArr.length; i++) {
+        winner = verticalWinCheck(colIdx, rowIdx) || horizontalWinCheck(colIdx, rowIdx) || diagonalUpWinCheck(colIdx, rowIdx) || diagonalDownWinCheck(colIdx, rowIdx);
+        console.log(winner);
+        if (winner) return;
+    }
+    //get tie
+}
+
+function verticalWinCheck(colIdx,rowIdx) {
+     if (RowIdx.length > 2) return null;
+        let colArr = board[colIdx];
+        return Math.abs(colArr[rowIdx] + colArr[rowIdx + 1] + colArr[rowIdx + 2] + colArr[rowIdx + 3]) === 4 ? colArr[rowIdx] : null;
+}
+
+function horizontalWinCheck(colIdx,rowIdx) {
+    if (RowIdx.length > 3) return null;
+    let colArr = board[colIdx];
+    return Math.abs(colArr[colIdx][rowIdx] + colArr[colIdx + 1][rowIdx] + colArr[colIdx + 2][rowIdx] + colArr[colIdx][colIdx + 3]) === 4 ? colArr[colIdx][colIdx] : null;
+}
+    
+// function diagonalUpWinCheck(colIdx,rowIdx) {
+//     if (RowIdx.length > )
+// }
+
+
+
+
+
+// function diagonalDownWinCheck {
+    
+// }
