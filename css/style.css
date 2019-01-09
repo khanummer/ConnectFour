@@ -53,10 +53,10 @@ td {
     background-size: contain;
     background-repeat: no-repeat;
     border: 2px solid black;
+    border-radius: 50%;
 }
 
 #game-info {
     justify-items: center;
 }
  
-

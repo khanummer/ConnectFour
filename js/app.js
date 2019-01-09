@@ -126,7 +126,7 @@ function checkColWinner(colIdx) {
     let colArr = board[colIdx];
    
     for (let rowIdx = 0; rowIdx < colArr.length; rowIdx++) {
-        winner = verticalWinCheck(colIdx, rowIdx) || horizontalWinCheck(colIdx, rowIdx)||  diagonalUpWinCheck(colIdx, rowIdx) /* || diagonalDownWinCheck(colIdx, rowIdx) */ ;
+        winner = verticalWinCheck(colIdx, rowIdx) || horizontalWinCheck(colIdx, rowIdx) || diagonalUpWinCheck(colIdx, rowIdx) || diagonalDownWinCheck(colIdx, rowIdx);
         if (winner) return;
     }
     //get tie
@@ -134,8 +134,8 @@ function checkColWinner(colIdx) {
 
 function verticalWinCheck(colIdx,rowIdx) {
      if (rowIdx > 2) return null;
-        let colArr = board[colIdx];
-        return Math.abs(colArr[rowIdx] + colArr[rowIdx + 1] + colArr[rowIdx + 2] + colArr[rowIdx + 3]) === 4 ? colArr[rowIdx] : null;
+    let colArr = board[colIdx];
+    return Math.abs(colArr[rowIdx] + colArr[rowIdx + 1] + colArr[rowIdx + 2] + colArr[rowIdx + 3]) === 4 ? colArr[rowIdx] : null;
 }
 
 function horizontalWinCheck(colIdx,rowIdx) {
@@ -144,14 +144,13 @@ function horizontalWinCheck(colIdx,rowIdx) {
 }
     
 function diagonalUpWinCheck(colIdx,rowIdx) {
-    // if (rowIdx > 2) return null; // ????
-    return Math.abs(board[colIdx][rowIdx + 1][colIdx + 1] + board[colIdx][rowIdx + 2][colIdx + 2] + board[colIdx][rowIdx + 3][colIdx + 3]) === 4 ? board[colIdx][rowIdx] : null;            
-
+    if (rowIdx > 3 && colIdx > 2) return null; 
+    return Math.abs(board[colIdx][rowIdx] + board[colIdx+ 1][rowIdx + 1] + board[colIdx + 2][rowIdx + 2] + board[colIdx + 3][rowIdx + 3]) === 4 ? board[colIdx][rowIdx] : null;            
 }
 
 
-function diagonalDownWinCheck {
- 
-    return Math.abs(board[colIdx][rowIdx - 1][colIdx + 1] + board[colIdx][rowIdx - 2][colIdx + 2] + board[colIdx][rowIdx - 3][colIdx + 3]) === 4 ? board[colIdx][rowIdx] : null;            
+function diagonalDownWinCheck(colIdx,rowIdx) {
+    if (rowIdx > 4 && colIdx > 4) return null;
+    return Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx - 1] + board[colIdx + 2][rowIdx - 2] + board[colIdx + 3][rowIdx - 3]) === 4 ? board[colIdx][rowIdx] : null;            
 
 }
