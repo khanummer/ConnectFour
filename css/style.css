@@ -10,7 +10,7 @@
     justify-content: space-evenly;
     align-items: center;
     justify-items: center;
-    color: black;  
+    color: BLACK;  
 } 
 
  
@@ -126,9 +126,28 @@ div {
     padding: 10px;
 }
 
-
-@media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+/* iPhone 6, 7, & 8 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+    .drop-buttons {
+        margin: 10;
+        padding: 2px;
+        margin: px;
     }
-  }
+    button {
+        padding: 1px;
+        margin: 1px;
+        flex-wrap: nowrap;
+    }
+    h1 {
+        text-align: center;
+    }
+    td {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%
+    }
+
+
+}

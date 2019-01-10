@@ -1,1 +1,8 @@
 # ConnectFour
+
+
+CONNECT 4
+
+'MURAKAMI EDITION'
+
+A CREATION BY 'UMMER KHAN'
