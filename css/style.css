@@ -12,8 +12,7 @@
     justify-items: center;
     color: black;  
 } 
-/* add velocity in the future */
-/* peach rgb(243, 182, 182) */
+
  
 #game-info {
     border-color:black;
@@ -29,56 +28,66 @@ body {
  
 button {
     padding: 10px;
-    margin: 19px;
+    margin: 16px;
     border-color: white;
     color: white;
     background-color: black;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
  }
 
  #button0 {
-    color: pink;
-    border-color: pink;
+    color: #FFD3D4;
+    background-color: #FFD3D4;
+    border-color: black;
  }
 
  #button1 {
-     color: blue;
-     border-color: blue;
+     color: #F5FFAD;
+     background-color: #F5FFAD;
+    border-color: black;
 }
 
 #button2 {
-     color: yellow;
-     border-color: yellow;
+     color: #A6FFB7;
+     background-color:#A6FFB7;
+    border-color: black;
 }
 
 #button3 {
-     color: red;
-     border-color: red;
+     color: #CFDBFF;
+     background-color: #CFDBFF;
+    border-color: black;
 }
 
 #button4 {
-     color: green;
-     border-color: green;
+     color: #ff6d73;
+     background-color: #ff6d73;
+    border-color: black;
 }
 
 #button5 {
-     color: purple;
-     border-color: purple;
+     color: #ECB6FF;
+     background-color: #ECB6FF;
+    border-color: black;
 }
 
 #button6 {
-     color: cyan;
-     border-color: cyan;
+     color: #FFEFBE;
+     background-color: #FFEFBE;
+    border-color: black;
+}
+#replay-btn {
+    border-radius: 1%;
+    width: 170px;
+
 }
  #game-info {
     text-align: center;
- }
 
-.dropButtons {
-    color: blue;
-    flex-direction: row; 
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-}
+    
+ }
 
 td {
     flex-direction: row;
@@ -92,5 +101,18 @@ td {
 
 #game-info {
     justify-items: center;
+    border: none;
+
 }
  
+/* #table {
+    background-color: red;
+
+} */
+
+#htp {
+    text-align: center;
+}
+
+
+

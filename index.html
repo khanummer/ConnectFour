@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CONNECT FOUR </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.min.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.ui.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.ui.min.js">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
@@ -26,7 +31,7 @@
         <button id="button5"> 6</button>
         <button id="button6"> 7</button>
     </div>   
-   
+   <section id="table">
     <table id='game-table'>
         <tbody>   
             <tr>
@@ -91,18 +96,17 @@
             </tr>
         </tbody>
     </table>
-   
-   
-   
-   
+   </section>
    
     <div id="game-info"></div>
-    <!-- <section>
-        Instructions
-     </section>  -->
 
     <button id="replay-btn">Replay Game</button>
-
+    <div id="htp">
+        HOW TO PLAY
+    </div>
+    <!-- <div id="htp-content">
+        To win in Connect Four, you must be the first player to get four of your flower in a row either horizontally, vertically, or diagonally.
+    </div> -->
 </body>
 </html>
 

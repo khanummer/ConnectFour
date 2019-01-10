@@ -4,12 +4,12 @@ const players = {
     '1': 'url(Images/purple-flower.png)',
     '-1': 'url(https://imgur.com/MUhBlCo.png)'
 };
-
 /*--- cached elements ---*/
 const tds = document.querySelectorAll('td');
 const gameInfo = document.getElementById('game-info');
 const replayBtn = document.getElementById('replay-btn');
 const messages = document.getElementById('game-info');
+const htp = document.getElementById('htp');
 
 let winner; // 1, -1, 'T', or null
 let activePlayer;
@@ -25,7 +25,14 @@ document.querySelector('.drop-buttons').addEventListener('click', function(evt) 
     winCheck();
     render();
 });
-
+htp.addEventListener('click', function() { 
+        if (htp.innerHTML = 'HOW TO PLAY') {
+            htp.innerHTML = 'To win in Connect Four, you must be the first player to get four of your flower in a row either horizontally, vertically, or diagonally.' 
+        } else {
+            htp.innerHTML = 'HOW TO PLAY'
+        };
+});
+  
 replayBtn.addEventListener('click', startGame);
 
 startGame();
@@ -54,9 +61,9 @@ function render() {
         td.style.backgroundImage = value ? players[value] : "none";
     }); 
     if (winner) {
-        messages.textContent = winner === 'T' ? "It's A Tie!" : `${winner === 1 ? 'Player 1 Wins!' : 'Player 2 Wins!'}`;
+        messages.textContent = winner === 'T' ? "It's A Tie!" : `${winner === 1 ? 'Purple Wins!' : 'Rainbow Wins!'}`;
     } else {
-        messages.textContent = `${activePlayer === 1 ? 'Player 1' : 'Player 2'}'s Turn, P1 : Purple, P2 : Rainbow`;
+        messages.textContent = `${activePlayer === 1 ? 'Purple' : 'Rainbow'}'s Turn, P1 : Purple, P2 : Rainbow`;
     }
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
 }
@@ -77,8 +84,11 @@ function checkColWinner(colIdx) {
         winner = verticalWinCheck(colIdx, rowIdx) || horizontalWinCheck(colIdx, rowIdx) || diagonalUpWinCheck(colIdx, rowIdx) || diagonalDownWinCheck(colIdx, rowIdx);
         if (winner) return;
     }
-    // get tie
+         var numDisk = board.reduce(((acc, colArr) => acc + colArr.length), 0);
+         return numDisk === 42 ? winner = 'T' : winner = null;
 }
+    
+
 
 function verticalWinCheck(colIdx,rowIdx) {
      if (rowIdx > 2) return null;
@@ -102,4 +112,4 @@ function diagonalDownWinCheck(colIdx,rowIdx) {
 
 }
 
-// black murakami flower instead
+// works off keyboard clicks '1' drops in column one 
