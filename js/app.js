@@ -1,7 +1,7 @@
 console.log('test')
 /*--- constants / lookups ---*/
 const players = {
-    '1': 'url(Images/purple-flower.png)',
+    '1': 'url(https://i.imgur.com/7Wyg7kD.png)',
     '-1': 'url(https://imgur.com/MUhBlCo.png)'
 };
 /*--- cached elements ---*/
