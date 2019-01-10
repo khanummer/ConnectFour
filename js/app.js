@@ -63,7 +63,6 @@ changeback.addEventListener('click', function() {
     if (bg === 5) {
         bg -=4;
     }
-    // loop thru + 2 + 3 + 4 + 5, then if bg =6 reset to 0
 });
 
 
