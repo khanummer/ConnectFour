@@ -10,11 +10,14 @@ const gameInfo = document.getElementById('game-info');
 const replayBtn = document.getElementById('replay-btn');
 const messages = document.getElementById('game-info');
 const htp = document.getElementById('htp');
+const contact = document.getElementById('contact');
+const changeback = document.getElementById('cb');
+const body = document.querySelector('body');
 
 let winner; // 1, -1, 'T', or null
 let activePlayer;
 let board;
-
+startGame();
 /*--- event listeners ---*/
 document.querySelector('.drop-buttons').addEventListener('click', function(evt) { 
     if (evt.target.tagName !== "BUTTON" || winner) return;
@@ -25,17 +28,44 @@ document.querySelector('.drop-buttons').addEventListener('click', function(evt) 
     winCheck();
     render();
 });
+
 htp.addEventListener('click', function() { 
-        if (htp.innerHTML = 'HOW TO PLAY') {
+        if (htp.innerHTML === 'HOW TO PLAY') {
             htp.innerHTML = 'To win in Connect Four, you must be the first player to get four of your flower in a row either horizontally, vertically, or diagonally.' 
-        } else {
+        } else if (htp.innerHTML != 'HOW TO PLAY'){
             htp.innerHTML = 'HOW TO PLAY'
         };
 });
-  
+
 replayBtn.addEventListener('click', startGame);
 
-startGame();
+contact.addEventListener('click', function() {
+    if (contact.innerHTML === 'CONTACT') {
+        contact.innerHTML = 'UMMERNKHAN@GMAIL.COM' 
+    } else if (contact.innerHTML !== 'CONTACT') {
+        contact.innerHTML = 'CONTACT';
+        }
+    
+});
+let bg = 1;
+changeback.addEventListener('click', function() {
+    
+    if (bg === 1) { 
+        body.style.backgroundImage = "url('https://cdn.shopify.com/s/files/1/0669/0717/products/MURAKAMI-Multicolore-Mini-WHITE-FULL2_d384bbff-4cf4-487a-b14b-0eebb0ba5831.jpg?v=1413178946')";
+    } else if (bg == 2) {
+        body.style.backgroundImage = "url('https://i.pinimg.com/originals/2c/0e/f4/2c0ef41707cd6b6ac77b9f1dd9a1aef5.jpg')";
+    } else if (bg == 3) {
+        body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp3106080.jpg')";
+    } else if (bg == 4) {
+        body.style.backgroundImage = "url('https://imgur.com/rOCcoLM.png')";
+    }
+    bg += 1;
+    if (bg === 5) {
+        bg -=4;
+    }
+    // loop thru + 2 + 3 + 4 + 5, then if bg =6 reset to 0
+});
+
 
 /*----- functions -------*/
 function startGame() {
@@ -66,7 +96,7 @@ function render() {
         messages.textContent = `${activePlayer === 1 ? 'Purple' : 'Rainbow'}'s Turn, P1 : Purple, P2 : Rainbow`;
     }
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
-}
+} 
 
 function winCheck() {
     winner = null;
@@ -113,5 +143,3 @@ function diagonalDownWinCheck(colIdx,rowIdx) {
 }
 
 // works off keyboard clicks '1' drops in column one 
-
-//a

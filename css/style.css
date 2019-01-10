@@ -37,45 +37,45 @@ button {
     width: 40px;
  }
 
- #button0 {
+#button0 {
     color: #FFD3D4;
     background-color: #FFD3D4;
     border-color: black;
  }
 
- #button1 {
-     color: #F5FFAD;
-     background-color: #F5FFAD;
+#button1 {
+    color: #F5FFAD;
+    background-color: #F5FFAD;
     border-color: black;
 }
 
 #button2 {
-     color: #A6FFB7;
-     background-color:#A6FFB7;
+    color: #A6FFB7;
+    background-color:#A6FFB7;
     border-color: black;
 }
 
 #button3 {
-     color: #CFDBFF;
-     background-color: #CFDBFF;
+    color: #CFDBFF;
+    background-color: #CFDBFF;
     border-color: black;
 }
 
 #button4 {
-     color: #ff6d73;
-     background-color: #ff6d73;
+    color: #ff6d73;
+    background-color: #ff6d73;
     border-color: black;
 }
 
 #button5 {
-     color: #ECB6FF;
-     background-color: #ECB6FF;
+    color: #ECB6FF;
+    background-color: #ECB6FF;
     border-color: black;
 }
 
 #button6 {
-     color: #FFEFBE;
-     background-color: #FFEFBE;
+    color: #FFEFBE;
+    background-color: #FFEFBE;
     border-color: black;
 }
 #replay-btn {
@@ -83,10 +83,13 @@ button {
     width: 170px;
 
 }
- #game-info {
-    text-align: center;
-
-    
+#cb {
+    border-radius: 1%;
+    width: 170px;
+}
+ 
+#game-info {
+    text-align: center; 
  }
 
 td {
@@ -115,4 +118,10 @@ td {
 }
 
 
+#cb {
+    text-align: center;
+}
 
+div {
+    padding: 10px;
+}
