@@ -113,3 +113,5 @@ function diagonalDownWinCheck(colIdx,rowIdx) {
 }
 
 // works off keyboard clicks '1' drops in column one 
+
+//a
