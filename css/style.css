@@ -105,12 +105,13 @@ td {
 #game-info {
     justify-items: center;
     border: none;
+    font-size: 50px;
+    font-family: 'Gloria Hallelujah', cursive;
 
 }
  
 /* #table {
-    background-color: red;
-
+    background-color: black;
 } */
 
 #htp {
@@ -124,6 +125,12 @@ td {
 
 div {
     padding: 10px;
+    font-size: 10px;
+}
+
+#bcode {
+    font-family: 'Libre Barcode 128 Text', cursive;
+    font-size: 30px;
 }
 
 /* iPhone 6, 7, & 8 */
@@ -153,3 +160,8 @@ and (max-device-width : 667px) {
 
 
 }
+
+/* add velocity & sound bites */
+/* create a README */
+/* finish media queries for all devices */
+/* fix replay game button */

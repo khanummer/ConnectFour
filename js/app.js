@@ -31,7 +31,7 @@ document.querySelector('.drop-buttons').addEventListener('click', function(evt) 
 
 htp.addEventListener('click', function() { 
         if (htp.innerHTML === 'HOW TO PLAY') {
-            htp.innerHTML = 'To win in Connect Four, you must be the first player to get four of your flower in a row either horizontally, vertically, or diagonally.' 
+            htp.innerHTML = 'To win in Connect Four, you must be the first player to get four of your flower in a row either horizontally, vertically, or diagonally. Player 1 is represented by a Purple Flower and Player 2 is represented by a Rainbow Flower. Click the colored buttons at the top to drop your flower into the coresponding column.' 
         } else if (htp.innerHTML != 'HOW TO PLAY'){
             htp.innerHTML = 'HOW TO PLAY'
         };
@@ -53,11 +53,13 @@ changeback.addEventListener('click', function() {
     if (bg === 1) { 
         body.style.backgroundImage = "url('https://cdn.shopify.com/s/files/1/0669/0717/products/MURAKAMI-Multicolore-Mini-WHITE-FULL2_d384bbff-4cf4-487a-b14b-0eebb0ba5831.jpg?v=1413178946')";
     } else if (bg == 2) {
-        body.style.backgroundImage = "url('https://i.pinimg.com/originals/2c/0e/f4/2c0ef41707cd6b6ac77b9f1dd9a1aef5.jpg')";
+        body.style.backgroundImage = "url('https://ferrebeekeeper.files.wordpress.com/2014/12/takashi-murakami-7.jpg')";
     } else if (bg == 3) {
-        body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp3106080.jpg')";
+        body.style.backgroundImage = "url('https://www.researchgate.net/profile/Marc_Steinberg5/publication/233324066/figure/fig2/AS:300043732045856@1448547408899/Murakami-Takashi-Manji-Fuji-c-Takashi-Murakami-Kaikai-Kiki-Co-Ltd-All-rights-reserved.png')";
+        body.style.backgroundSize = 'cover';
     } else if (bg == 4) {
         body.style.backgroundImage = "url('https://imgur.com/rOCcoLM.png')";
+        body.style.backgroundSize = 'auto';
     }
     bg += 1;
     if (bg === 5) {
@@ -92,7 +94,7 @@ function render() {
     if (winner) {
         messages.textContent = winner === 'T' ? "It's A Tie!" : `${winner === 1 ? 'Purple Wins!' : 'Rainbow Wins!'}`;
     } else {
-        messages.textContent = `${activePlayer === 1 ? 'Purple' : 'Rainbow'}'s Turn, P1 : Purple, P2 : Rainbow`;
+        messages.textContent = `${activePlayer === 1 ? 'PURPLE' : 'RAINBOW'}'S TURN`;
     }
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
 } 
