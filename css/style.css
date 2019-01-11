@@ -1,8 +1,13 @@
 * {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
    
 }
-
+h1 {
+    font-size: 50px;
+}
+h4 {
+    font-size: 20px;
+}
  body {
     display: flex;
     flex-direction: column;
@@ -23,7 +28,8 @@
 
 body {
     background-image: url("https://imgur.com/rOCcoLM.png");
-    background-position: center; 
+    background-position: center;
+    background-size: cover; 
 }
  
 button {
@@ -80,12 +86,10 @@ button {
 }
 #replay-btn {
     border-radius: 1%;
-    width: 170px;
+    width: 130px;
+    border-color: white;
+    font-size: 15px;
 
-}
-#cb {
-    border-radius: 1%;
-    width: 170px;
 }
  
 #game-info {
@@ -127,11 +131,15 @@ div {
     padding: 10px;
     font-size: 10px;
 }
+#htp, #cb, #contact {
+    font-family: 'Press Start 2P', cursive;
+}
 
 #bcode {
     font-family: 'Libre Barcode 128 Text', cursive;
     font-size: 30px;
 }
+
 
 /* iPhone 6, 7, & 8 */
 @media only screen 
@@ -161,7 +169,3 @@ and (max-device-width : 667px) {
 
 }
 
-/* add velocity & sound bites */
-/* create a README */
-/* finish media queries for all devices */
-/* fix replay game button */

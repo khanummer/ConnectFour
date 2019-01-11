@@ -56,10 +56,8 @@ changeback.addEventListener('click', function() {
         body.style.backgroundImage = "url('https://ferrebeekeeper.files.wordpress.com/2014/12/takashi-murakami-7.jpg')";
     } else if (bg == 3) {
         body.style.backgroundImage = "url('https://www.researchgate.net/profile/Marc_Steinberg5/publication/233324066/figure/fig2/AS:300043732045856@1448547408899/Murakami-Takashi-Manji-Fuji-c-Takashi-Murakami-Kaikai-Kiki-Co-Ltd-All-rights-reserved.png')";
-        body.style.backgroundSize = 'cover';
     } else if (bg == 4) {
         body.style.backgroundImage = "url('https://imgur.com/rOCcoLM.png')";
-        body.style.backgroundSize = 'auto';
     }
     bg += 1;
     if (bg === 5) {
@@ -92,7 +90,7 @@ function render() {
         td.style.backgroundImage = value ? players[value] : "none";
     }); 
     if (winner) {
-        messages.textContent = winner === 'T' ? "It's A Tie!" : `${winner === 1 ? 'Purple Wins!' : 'Rainbow Wins!'}`;
+        messages.textContent = winner === 'T' ? "IT'S A TIE!" : `${winner === 1 ? 'Purple Wins!' : 'Rainbow Wins!'}`;
     } else {
         messages.textContent = `${activePlayer === 1 ? 'PURPLE' : 'RAINBOW'}'S TURN`;
     }
@@ -118,7 +116,7 @@ function checkColWinner(colIdx) {
          var numDisk = board.reduce(((acc, colArr) => acc + colArr.length), 0);
          return numDisk === 42 ? winner = 'T' : winner = null;
 }
-    
+
 
 
 function verticalWinCheck(colIdx,rowIdx) {
