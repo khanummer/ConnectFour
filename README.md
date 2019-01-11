@@ -11,8 +11,7 @@ This Repo contains a fully functioning game of connect four, themed after the ar
 https://khanummer.github.io/ConnectFour/
 
 
-![Image of Connect Four]
-(https://i.imgur.com/gYWOYCU.png)
+![Image of Connect Four](https://i.imgur.com/gYWOYCU.png)
 
 This game was made completely by using HTML, CSS, and JAVASCRIPT. 
 
