@@ -1,9 +1,11 @@
 console.log('test')
+
 /*--- constants / lookups ---*/
 const players = {
     '1': 'url(https://i.imgur.com/7Wyg7kD.png)',
     '-1': 'url(https://imgur.com/MUhBlCo.png)'
 };
+
 /*--- cached elements ---*/
 const tds = document.querySelectorAll('td');
 const gameInfo = document.getElementById('game-info');
@@ -13,11 +15,19 @@ const htp = document.getElementById('htp');
 const contact = document.getElementById('contact');
 const changeback = document.getElementById('cb');
 const body = document.querySelector('body');
+const button0 = document.getElementById('button0');
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
+const button3 = document.getElementById('button3');
+const button4 = document.getElementById('button4');
+const button5 = document.getElementById('button5');
+const button6 = document.getElementById('button6');
 
 let winner; // 1, -1, 'T', or null
 let activePlayer;
 let board;
 startGame();
+
 /*--- event listeners ---*/
 document.querySelector('.drop-buttons').addEventListener('click', function(evt) { 
     if (evt.target.tagName !== "BUTTON" || winner) return;
@@ -95,6 +105,37 @@ function render() {
         messages.textContent = `${activePlayer === 1 ? 'PURPLE' : 'RAINBOW'}'S TURN`;
     }
     replayBtn.style.visibility = winner ? 'visible' : 'hidden';
+    if (activePlayer == 1) {
+        button0.style.backgroundColor = '#ECB6FF';
+        button0.style.color = '#ECB6FF';
+        button1.style.backgroundColor = '#ECB6FF';
+        button1.style.color = '#ECB6FF';
+        button2.style.backgroundColor = '#ECB6FF';
+        button2.style.color = '#ECB6FF';
+        button3.style.backgroundColor = '#ECB6FF';
+        button3.style.color = '#ECB6FF';
+        button4.style.backgroundColor = '#ECB6FF';
+        button4.style.color = '#ECB6FF';
+        button5.style.backgroundColor = '#ECB6FF';
+        button5.style.color = '#ECB6FF';
+        button6.style.backgroundColor = '#ECB6FF';
+        button6.style.color = '#ECB6FF';
+    } else {
+        button0.style.backgroundColor = '#FFD3D4';
+        button0.style.color = '#FFD3D4';
+        button1.style.backgroundColor = '#F5FFAD';
+        button1.style.color = '#F5FFAD';
+        button2.style.backgroundColor = '#A6FFB7';
+        button2.style.color = '#A6FFB7';
+        button3.style.backgroundColor = '#CFDBFF';
+        button3.style.color = '#CFDBFF';
+        button4.style.backgroundColor = '#ff6d73';
+        button4.style.color = '#ff6d73';
+        button5.style.backgroundColor = '#ECB6FF';
+        button5.style.color = '#ECB6FF';
+        button6.style.backgroundColor = '#FFEFBE';
+        button6.style.color = '#FFEFBE';
+    }
 } 
 
 function winCheck() {
