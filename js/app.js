@@ -90,7 +90,7 @@ function render() {
         td.style.backgroundImage = value ? players[value] : "none";
     }); 
     if (winner) {
-        messages.textContent = winner === 'T' ? "IT'S A TIE!" : `${winner === 1 ? 'Purple Wins!' : 'Rainbow Wins!'}`;
+        messages.textContent = winner === 'T' ? "IT'S A TIE!" : `${winner === 1 ? 'PURPLE WINS!' : 'RAINBOW WINS!'}`;
     } else {
         messages.textContent = `${activePlayer === 1 ? 'PURPLE' : 'RAINBOW'}'S TURN`;
     }
@@ -140,5 +140,3 @@ function diagonalDownWinCheck(colIdx,rowIdx) {
     return Math.abs(board[colIdx][rowIdx] + board[colIdx + 1][rowIdx - 1] + board[colIdx + 2][rowIdx - 2] + board[colIdx + 3][rowIdx - 3]) === 4 ? board[colIdx][rowIdx] : null;            
 
 }
-
-// works off keyboard clicks '1' drops in column one 
